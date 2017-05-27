@@ -90,9 +90,11 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_settings:
                 // User chose the "Settings" item, show the app settings UI...
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
                 return true;
 
-            case R.id.action_favorite:
+            case R.id.action_about:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
                 return true;
@@ -118,6 +120,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void startMaps(View view){
         Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
+
+    public void startSettings(View view) {
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 }
