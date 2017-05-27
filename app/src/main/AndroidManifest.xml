@@ -18,6 +18,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -29,6 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".DisplayMessageActivity"
             android:parentActivityName=".MainActivity">
@@ -65,6 +67,21 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.sushi.first.MainActivity" />
         </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sushi.first.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".SampleActivity"
+            android:label="Sample"
+            android:parentActivityName=".AboutActivity"></activity>
+
     </application>
 
 </manifest>
