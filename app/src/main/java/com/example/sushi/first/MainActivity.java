@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // Here, thisActivity is the current activity
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
 
         if (ContextCompat.checkSelfPermission(this,
@@ -90,13 +90,13 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_settings:
                 // User chose the "Settings" item, show the app settings UI...
-                Intent intent = new Intent(this, SettingsActivity.class);
-                startActivity(intent);
+                Intent intentSettings = new Intent(this, SettingsActivity.class);
+                startActivity(intentSettings);
                 return true;
-
             case R.id.action_about:
-                // User chose the "Favorite" action, mark the current item
-                // as a favorite...
+
+                Intent intentAbout = new Intent(this, AboutActivity.class);
+                startActivity(intentAbout);
                 return true;
 
             default:
@@ -125,6 +125,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void startSettings(View view) {
         Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void startAbout(View view) {
+        Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
     }
 }
